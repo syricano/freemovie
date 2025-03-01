@@ -1,16 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="Free Movie">
-    <meta name="description" content="Free Movie">
-    <meta name="author" content="Free Movie">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="Free Movie" />
+    <meta name="description" content="Free Movie" />
+    <meta name="author" content="Free Movie" />
+    <link rel="stylesheet" href="style.css" />
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <title>Free Movie</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body class="bg-gray-900 text-white">
+    <!-- Movie Card -->
+    <div
+      class="movie-card max-w-xs bg-gray-800 rounded-lg shadow-lg overflow-hidden cursor-pointer hover:scale-105 transform transition-all duration-300"
+      onclick="openModal()"
+    >
+      <img
+        src="https://via.placeholder.com/300x450"
+        alt="Movie Poster"
+        class="w-full h-64 object-cover rounded-t-lg"
+      />
+      <div class="p-4">
+        <h3 class="text-xl font-semibold">Movie Title</h3>
+        <p class="mt-2 text-gray-400 text-sm">Short movie description...</p>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div
+      id="movieModal"
+      class="modal fixed inset-0 bg-black bg-opacity-70 hidden justify-center items-center"
+    >
+      <div class="modal-content bg-gray-800 p-8 rounded-lg w-96 max-w-full">
+        <span
+          class="close text-white font-bold text-3xl absolute top-3 right-3 cursor-pointer"
+          onclick="closeModal()"
+          >&times;</span
+        >
+        <img
+          src="https://via.placeholder.com/300x450"
+          alt="Movie Poster"
+          class="w-full h-96 object-cover rounded-lg"
+        />
+        <h2 class="mt-4 text-2xl font-semibold">Movie Title</h2>
+        <p class="mt-4 text-gray-300">
+          Full description of the movie. Includes actors, genre, release year,
+          and more details.
+        </p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>
