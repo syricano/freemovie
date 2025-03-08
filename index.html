@@ -8,27 +8,79 @@
     <meta name="author" content="Free Movie" />
     <link rel="stylesheet" href="style.css" />
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <title>Free Movie</title>
-<<<<<<< HEAD
+    <title>Free Movies</title>
   </head>
-  <body class="bg-gray-900 text-white">
-    <!-- Movie Card -->
-    <div
-      class="movie-card max-w-xs bg-gray-800 rounded-lg shadow-lg overflow-hidden cursor-pointer hover:scale-105 transform transition-all duration-300"
-      onclick="openModal()"
-    >
-      <img
-        src="https://via.placeholder.com/300x450"
-        alt="Movie Poster"
-        class="w-full h-64 object-cover rounded-t-lg"
-      />
-      <div class="p-4">
-        <h3 class="text-xl font-semibold">Movie Title</h3>
-        <p class="mt-2 text-gray-400 text-sm">Short movie description...</p>
+  <body class="bg-[#222222] text-gray-300">
+    <!-- Nav bar -->
+    <div class="w-full h-[50px] bg-black sticky top-0">
+      <!-- Navbar container -->
+      <div class="flex items-center px-[50px] h-full text-white font-sans">
+        <!-- Logo container -->
+        <div class="flex justify-between items-center w-full">
+          <h1 class="text-[30px] text-[#4dbf00]">Freemovies</h1>
+        </div>
+        <!-- menu container -->
+        <nav class="ml-[30px]">
+          <ul class="flex list-none">
+            <li class="mr-[30px] font-bold">
+              <a
+                href="/home"
+                class="text-white hover:text-[#4dbf00] transition-all"
+                >Home</a
+              >
+            </li>
+            <li class="mr-[30px]">
+              <a
+                href="/movies"
+                class="text-white hover:text-[#4dbf00] transition-all"
+                >Movies</a
+              >
+            </li>
+            <li class="mr-[30px]">
+              <a
+                href="/series"
+                class="text-white hover:text-[#4dbf00] transition-all"
+                >Series</a
+              >
+            </li>
+            <li class="mr-[30px]">
+              <a
+                href="/contact"
+                class="text-white hover:text-[#4dbf00] transition-all"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
       </div>
     </div>
 
-    <!-- Modal -->
+
+
+    <!-- Search Bar Container -->
+    <div class="flex justify-center items-center mt-10">
+      <div class="relative w-full max-w-[500px]">
+        <input
+          type="text"
+          class="w-full p-3 pl-10 bg-[#333333] text-white border-2 border-[#4dbf00] rounded-md focus:outline-none focus:ring-2 focus:ring-[#4dbf00] transition-all"
+          placeholder="Search for movies or series..."
+        />
+
+         <!-- Search Icon -->
+        <i class="absolute top-1/2 left-3 transform -translate-y-1/2 text-[#4dbf00] text-xl">🔍</i>
+
+        <!-- Clear Button -->
+        <button
+          id="clear-btn"
+          class="absolute top-1/2 right-3 transform -translate-y-1/2 text-[#4dbf00] text-xl opacity-0 transition-opacity duration-200"
+          onclick="clearSearch()"
+        >
+
+    <!-- Movie Card -->
+    <!-- <div
+  
+
+    Modal -->
     <div
       id="movieModal"
       class="modal fixed inset-0 bg-black bg-opacity-70 hidden justify-center items-center"
@@ -55,49 +107,3 @@
     <script src="script.js"></script>
   </body>
 </html>
-=======
-</head>
-<body>
-    <header>
-        <div class="banner">
-            <img src="" alt="banner">
-        </div>
-        <!-- Search section here P2 -->
-        
-        <!--End of Search section P2-->
-
-        <!-- Navigation P1-->
-        <nav>
-            <div class="logo">
-                <h1>Free Movie</h1>
-            </div>
-            <div class="menu">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Movies</a></li>
-                    <li><a href="#">TV Shows</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-
-
-    </header>
-    <main>
-        <!-- Movie section P1-->
-         <section id="popular-movies">
-
-         </section>
-
-        <!---->
-        <!-- Search results cards P2-->
-         <section id="search-results">
-
-         </section>
-
-    </main>
-
-    
-</body>
-</html>
->>>>>>> 4fa844c51256333bad17e9c9f8df82c384f72c0e
