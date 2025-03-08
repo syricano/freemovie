@@ -1,70 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="keywords" content="Free Movie" />
-    <meta name="description" content="Free Movie" />
-    <meta name="author" content="Free Movie" />
-    <link rel="stylesheet" href="style.css" />
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <title>Free Movies</title>
-  </head>
-  <body class="bg-[#222222] text-gray-300">
-    <!-- Nav bar -->
-    <div class="w-full h-[50px] bg-black sticky top-0">
-      <!-- Navbar container -->
-      <div class="flex items-center px-[50px] h-full text-white font-sans">
-        <!-- Logo container -->
-        <div class="flex justify-between items-center w-full">
-          <h1 class="text-[30px] text-[#4dbf00]">Freemovies</h1>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Free Movie">
+    <meta name="description" content="Free Movie">
+    <meta name="author" content="Free Movie">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <title>Free Movie</title>
+</head>
+<body>
+    <header class="bg-[#ADDC35] p-[16px]">
+        <div >
+            
         </div>
-        <!-- menu container -->
-        <nav class="ml-[30px]">
-          <ul class="flex list-none">
-            <li class="mr-[30px] font-bold">
-              <a
-                href="/home"
-                class="text-white hover:text-[#4dbf00] transition-all"
-                >Home</a
-              >
-            </li>
-            <li class="mr-[30px]">
-              <a
-                href="/movies"
-                class="text-white hover:text-[#4dbf00] transition-all"
-                >Movies</a
-              >
-            </li>
-            <li class="mr-[30px]">
-              <a
-                href="/series"
-                class="text-white hover:text-[#4dbf00] transition-all"
-                >Series</a
-              >
-            </li>
-            <li class="mr-[30px]">
-              <a
-                href="/contact"
-                class="text-white hover:text-[#4dbf00] transition-all"
-                >Contact</a
-              >
-            </li>
-          </ul>
+        <!-- Search section here P2 -->
+        
+        <!--End of Search section P2-->
+
+        <!-- Navigation P1-->
+        <nav class="fixed top-0 left-0 w-full bg-[#ADDC35] shadow-md z-50 flex justify-between flex-wrap p-4">
+            <div class="logo">
+                <a href="index.html"><h1 class="text-[#222222] text-[18px] sm:text-[22px] md:text-[28px] lg:text-[30px] font-mono font-roboto">FREE MOVIES</h1>
+                </a>
+
+            </div>
+            <div class="menu">
+                <ul class="flex gap-6">
+                    <li><a href="index.html" class="text-[#222222] text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] font-['Roboto', 'Helvetica', 'Arial', 'sans-serif']">HOME</a></li>
+                    <li><a href="#popular-movies" class="text-[#222222] text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] font-['Roboto', 'Helvetica', 'Arial', 'sans-serif']">MOVIES</a></li>
+                    <li><a href="#" class="text-[#222222] text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] font-['Roboto', 'Helvetica', 'Arial', 'sans-serif']">TV SHOWS</a></li>
+                     <li><a href="#" class="text-[#222222] text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] font-['Roboto', 'Helvetica', 'Arial', 'sans-serif']">CONTACT</a></li>
+                </ul>
+            </div>
         </nav>
       </div>
     </div>
 
 
-
-    <!-- Search Bar Container -->
-    <div class="flex justify-center items-center mt-10">
-      <div class="relative w-full max-w-[500px]">
-        <input
-          type="text"
-          class="w-full p-3 pl-10 bg-[#333333] text-white border-2 border-[#4dbf00] rounded-md focus:outline-none focus:ring-2 focus:ring-[#4dbf00] transition-all"
-          placeholder="Search for movies or series..."
-        />
+    </header>
+    <main>
+        <!-- Movie section P1-->
+        <section id="popular-movies">
+            <h2 class="text-[#222222] text-[18px] sm:text-[22px] md:text-[28px] lg:text-[30px] font-mono">Popular Movies</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <!-- Movies will be inserted here by JavaScript -->
+            </div>
+        </section>
 
          <!-- Search Icon -->
         <i class="absolute top-1/2 left-3 transform -translate-y-1/2 text-[#4dbf00] text-xl">🔍</i>
@@ -76,9 +61,10 @@
           onclick="clearSearch()"
         >
 
-    <!-- Movie Card -->
-    <!-- <div
-  
+    </main>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="script.js" defer></script>
 
     Modal -->
     <div
