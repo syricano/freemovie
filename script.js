@@ -143,5 +143,36 @@ searchModal.addEventListener('click', (event) => {
   }
 });
 
+// ---------- FAVORITES FUNCTIONALITY ---------- //
+// Function to save favorite movies to localStorage
+function saveFavoriteMovies(favorites) {
+  localStorage.setItem('favorites', JSON.stringify(favorites));
+}
+
+// Function to get favorite movies from localStorage
+function getFavoriteMovies() {
+  const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+  return favorites;
+}
+
+// Function to add a movie to favorites
+function addToFavorites(movie) {
+  const favorites = getFavoriteMovies();
+  // Check if movie already exists in favorites
+  if (!favorites.some(fav => fav.id === movie.id)) {
+    favorites.push(movie);
+    saveFavoriteMovies(favorites);
+  }
+}
+
+// Function to remove a movie from favorites
+function removeFromFavorites(movieId) {
+  let favorites = getFavoriteMovies();
+  favorites = favorites.filter(movie => movie.id !== movieId);
+  saveFavoriteMovies(favorites);
+  updateFavoriteMoviesDisplay(); // Update the displayed favorite movies
+}
+
+
 // Fetch movies when the page loads
 document.addEventListener('DOMContentLoaded', fetchPopularMovies);
